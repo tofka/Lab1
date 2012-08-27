@@ -17,9 +17,9 @@ namespace Lab1.Helpers
         public static string RootCommandList {
             get
             {
-                string returnString = string.Format("\n\nList of Commands:");
-                returnString += string.Format("\n\t?/help:\tPrints this list of commands.");
-                returnString += string.Format("\n\texit:\tExits the program.");
+                string returnString = "\n\nList of Commands:";
+                returnString += "\n\t?/help:\tPrints this list of commands.";
+                returnString += "\n\texit:\tExits the program.";
 
                 return returnString;
             }

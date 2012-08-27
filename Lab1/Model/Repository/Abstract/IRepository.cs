@@ -6,7 +6,7 @@ namespace ChangeMe.Model.Repository.Abstract
     /// <summary>
     /// Interface för Repository
     /// </summary>
-    interface IRepository
+    public interface IRepository
     {
         List<Post> GetPosts();
         void AddPost(Post newPost);
