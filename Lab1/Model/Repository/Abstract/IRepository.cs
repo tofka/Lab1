@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ChangeMe.Model.Repository.Abstract
+namespace Lab1.Model.Abstract
 {
     /// <summary>
     /// Interface för Repository
     /// </summary>
-    public interface IRepository
-    {
+    public interface IRepository {
+            
         List<Post> GetPosts();
         void AddPost(Post newPost);
         void RemovePost(Guid postID);

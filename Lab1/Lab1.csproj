@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Helpers\InputHelper.cs" />
     <Compile Include="Helpers\OutputHelper.cs" />
+    <Compile Include="Model\List.cs" />
+    <Compile Include="Model\Logger.cs" />
     <Compile Include="Model\InputParser.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\Repository\Abstract\IRepository.cs" />
@@ -54,6 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Docs\Test.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

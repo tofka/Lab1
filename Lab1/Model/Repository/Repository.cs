@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ChangeMe.Model.Repository.Abstract;
+using Lab1.Model;
+using Lab1.Model.Abstract;
 
-namespace ChangeMe.Model.Repository
+namespace Lab1.Model
 {
     /// <summary>
     /// Klass som hanterar data för applikationen
     /// </summary>
     public class Repository : IRepository
-    {
+    {        
         // privata listor med User- och Post-objekt
         private List<User> users;
         private List<Post> posts;

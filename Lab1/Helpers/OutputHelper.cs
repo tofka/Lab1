@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+//4. Skapa en statisk metod i OutputHelper som heter Put och som tar en sträng som parameter och skriver ut denna sträng till konsolen. 
+//Ersätt de Console.WriteLine i main-funktionen med denna funktion. [1p]
 namespace Lab1.Helpers
 {
     /// <summary>
@@ -20,8 +21,19 @@ namespace Lab1.Helpers
                 string returnString = "\n\nList of Commands:";
                 returnString += "\n\t?/help:\tPrints this list of commands.";
                 returnString += "\n\texit:\tExits the program.";
-
+                returnString += "\n\tlog:\tlist latest commands.";
+                returnString += "\n\tFunc<int,bool>:\tExplain Func<int, bool>.";
+                returnString += "\n\tDictionary:\tShow interface";
+                returnString += "\n\tList:\tList 10 users";
                 return returnString;
+            }
+        }
+
+        public static string dictionary
+        {
+            get
+            {
+                return string.Format("\n\nSystem.Collections.Generics.Dictionary implements IDictionary<TKey,TValue>.");
             }
         }
 
@@ -30,6 +42,10 @@ namespace Lab1.Helpers
         /// </summary>
         /// <param name="message">[Optional] En sträng som läggs till i slutet på befintligt meddelande</param>
         /// <returns></returns>
+        /// 
+        public static void Put(string text) {
+            Console.WriteLine(text);            
+        }
         public static string ExitMessage(string message = "") {
             return string.Format("\n\nProgram closing. {0}", message);
         }
@@ -45,6 +61,14 @@ namespace Lab1.Helpers
                 return string.Format("\n\nInvalid Input! (type (? or help) and [enter] for help.)");
             }
         }
+
+       public static string func
+       {
+            get
+            {
+            return string.Format("Func<int, bool> är en delegate som kan hålla ett lambda-uttryck med en int och en bool");
+            }
+        }    
 
         /// <summary>
         /// Property som innehåller felmeddelande som skall ges om programmet inte vet vilket
@@ -68,11 +92,10 @@ namespace Lab1.Helpers
                 return string.Format("\n\nPlease Enter command + [enter] (help: ?):");
             }
         }
-
         /// <summary>
         /// Property som innehåller ett välkomstmeddelande
         /// </summary>
-        private static string GreetingMessage
+        public static string GreetingMessage
         {
             get
             {
